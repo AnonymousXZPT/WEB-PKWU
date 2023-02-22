@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <div id="header">
+        <h2 style="text-align: center; color: #fff;">Login to Your Account</h2>
+    </div>
+    <div id="form-wrapper">
+        <div class="form-content">
+            <form>
+                <i class="fa fa-user" id="user"></i><label for="username">Username<br />
+                    <input type="text" id="username" name="username" placeholder="Your username" spellcheck="false" required />
+                </label><br />
+                <i class="fa fa-envelope" id="email"></i><label for="email">E-mail<br />
+                    <input type="email" id="email" name="email" placeholder="Your e-mail" spellcheck="false" required />
+                </label><br />
+                <i class="fa fa-lock" id="password"></i><label for="password">Password<br />
+                    <input type="password" id="password" name="password" placeholder="Your password" spellcheck="false" required />
+                </label><br />
+                <input type="submit" value="Sign in">
+                <div class="alternative-login"></div>
+                <div class="alternative">
+                    <span>Or login with</span><br />
+                    <a href="https://myaccount.google.com" target="_blank">
+                        <i class="fa fa-google" id="google" style="color: #000;"></i>
+                    </a>
+                    <a href="https://account.microsoft.com" target="_blank">
+                        <i class="fa fa-windows" id="windows" style="color: #000;"></i>
+                    </a>
+                    <a href="https://appleid.apple.com" target="_blank">
+                        <i class="fa fa-apple" id="apple" style="color: #000;"></i>
+                    </a>
+                </div>
+                <div id="acc-signup">
+                    <span>Doesn't have an account yet?<a href="signup.html"> Sign up</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    * {
+        font-family: 'Work Sans', sans-serif;
+    }
+    body {
+        background: #0e2a47;
+    }
+    form {
+        box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
+        height: 70vh;
+        background: #48ffd5;
+    }
+    #form-wrapper {
+        width: 30%;
+        margin-left: 465px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    label {
+        margin-left: 5px;
+    }
+    #user {
+        margin-left: 50px;
+        margin-top: 20px;
+    }
+    input[type="text"] {
+        margin-left: 50px;
+        width: 70%;
+        height: 3.5vh;
+        margin-top: 10px;
+    }
+    #email {
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    input[type="email"] {
+        margin-left: 50px;
+        width: 70%;
+        height: 3.5vh;
+    }
+    #password {
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+    input[type="password"] {
+        margin-left: 50px;
+        width: 70%;
+        height: 3.5vh;
+    }
+    input[type="submit"] {
+        width: 25%;
+        height: 5vh;
+        margin-left: 150px;
+        margin-top: 40px;
+        cursor: pointer;
+        background: none;
+        border-color: #26abff;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+        background: #26abff;
+        transition: .4s;
+        color: #fff;
+    }
+    input::placeholder {
+        font-size: 1.1em;
+    }
+    .alternative-login {
+        border: 1px solid #000;
+        margin-top: 30px;
+        width: 90%;
+        margin-left: 20px;
+    }
+    .alternative {
+        margin-left: 155px;
+        margin-top: 10px;
+    }
+    #google {
+        margin-left: -10px;
+        margin-top: 20px;
+        font-size: 2em;
+        padding-right: 15px;
+    }
+    #windows {
+        font-size: 2em;
+        padding-right: 15px;
+    }
+    #apple {
+        font-size: 2em;
+    }
+    a {
+        text-decoration: none;
+    }
+    #acc-signup {
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+</style>

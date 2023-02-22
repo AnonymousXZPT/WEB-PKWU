@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Start a project | Jopunity</title>
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <ul>
+                <a href="main-page.html"><img id="logo" src="https://i.ibb.co/yS42Ch2/IMG-20230216-174223-removebg-preview.png" alt="web-logo" border="0"></a>
+                <li id="nav-projects"><a href="projects.html">Projects</a></li>
+                <li id="nav-about"><a href="main-page.html">About</a></li>
+                <li id="nav-faqs"><a href="faqs.html">FAQs</a></li>
+                <li id="nav-login"><i class="fa fa-user" style="color: #fff; margin-left: 10px;"><a href="login.html">Login</a></i></li>
+            </ul>
+        </nav><br />
+            <div class="upload-form">
+                <h3 style="color: #0e2a47; text-indent: 30px; padding-top: 20px; text-align: center; border-bottom: 2px solid #282828; margin-bottom: 15px;">START CREATING</h3>
+            <label for="role" style="margin-top: 50px; margin-left: 160px;">I'm a</label>
+            <select name="role" id="role">
+                <option value="worker">Worker</option>
+                <option value="client">Client</option>
+            </select><br />
+            <label for="title" id="title">Project title</label><br />
+            <input type="text" placeholder="Project name" required /><br />
+            <label for="description" id="desc">Description</label><br />
+            <textarea name="description" id="description" cols="70" rows="9" placeholder="Tell us about your project" spellcheck="false"></textarea><br />
+            <label for="add-messages" id="add">Additional messages</label><br />
+            <textarea name="add-messages" id="add-messages" cols="70" rows="9" placeholder="Type them here" spellcheck="false"></textarea><br />
+            <label for="files" id="file">Files</label><br />
+            <input type="file"><br />
+            <button id="upload" onclick="submit()">Submit</button>
+            <span id="message"></span>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    * {
+        font-family: 'Work Sans', sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    nav {
+        background: #0e2a47;
+        width: 196.5vh;
+        height: 9.9vh;
+        margin-left: -8px;
+        position: fixed;
+        margin-top: -12px;
+    }
+    ul {
+        margin-top: -1px;
+    }
+    li {
+        padding-top: 25px;
+        padding-bottom: 26px;
+        list-style: none;
+        display: inline-block;
+    }
+    a {
+        margin-top: -20px;
+        padding: 25px 25px 25px 25px;
+    }
+    nav a {
+        text-decoration: none;
+        color: #fff;
+    }
+    #nav-projects {
+        margin-left: 680px;
+    }
+    #nav-projects:hover {
+        background: #48ffd5;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-about:hover {
+        background: #48ffd5;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-faqs:hover {
+        background: #48ffd5;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-login:hover {
+        background: #48ffd5;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-projects:active {
+        background: greenyellow;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-about:active {
+        background: greenyellow;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-faqs:active {
+        background: greenyellow;
+        transition: .4s;
+        color: #000;
+    }
+    #nav-login:active {
+        background: greenyellow;
+        transition: .4s;
+        color: #000;
+    }
+    #logo {
+        height: 11vh;
+        margin-bottom: -28px;
+        margin-left: -100px;
+        margin-top: -10px;
+    }
+    .upload-form {
+        margin-top: 50px;
+        margin-left: 220px;
+        background: #f8f2ed;
+        width: 65%;
+        height: 87vh;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    #role {
+        margin-left: 10px;
+    }
+    #title {
+        margin-left: 160px;
+        padding-top: 50px;
+    }
+    #desc {
+        margin-left: 160px;
+    }
+    #add {
+        margin-left: 160px;
+    }
+    #file {
+        margin-left: 160px;
+    }
+    input[type="text"] {
+        margin-left: 160px;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        border: 0.5px solid #0e2a47;
+        border-radius: 5px;
+        height: 3.5vh;
+        outline: none;
+    }
+    input[type="file"] {
+        margin-left: 160px;
+        margin-top: 10px;
+    }
+    textarea {
+        border-radius: 5px;
+        outline: none;
+        margin-left: 160px;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    label {
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    #upload {
+        margin-left: 160px;
+        margin-top: 10px;
+        width: 20%;
+        height: 5vh;
+        background: none;
+        border: 2px solid green;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #upload:hover {
+        background: green;
+        transition: .5s;
+        color: #fff;
+    }
+</style>
+<script>
+    submit = () => {
+        document.getElementById("message").innerHTML="You must be signed in to upload a project.";
+        document.getElementById("message").style.color="red";
+    }
+</script>
